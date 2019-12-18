@@ -19,19 +19,42 @@
 #### 安裝 Eclipse IDE
   - 連結：https://www.eclipse.org/
   
-### 主程式位置
+## 主程式位置
 
-前面將數據都處理好之後
+  - BF法
 
-以下為主要運算之程式碼:
+  // 取得使用者輸入的整數
+		 		Scanner scanner=new Scanner(System.in);
+		 		// 輸入此次作業指定Rod Length值
+		 		System.out.print("Rod length: ");
+		 		int n=scanner.nextInt();
+		 		// 輸出Maximum revenue
+		 		System.out.println("Maximum revenue: "+BruteForceRodcutting(Price,n));
+  // 雙層循環建立r和s存入切割數點，以及Maximum revenue
+	static int[] s=new int[100];
+	static int BruteForceRodcutting(int price[],int n)
+	// Bruteforce 暴力法: 列出每種切割方案，比較出Maximum revenue
+	// 所需時間T=O(2^n)
+	{
+		if(n==0)
+			{
+				// 無法切割: return 0
+				return 0;
+			} 
+		else
+		{
+			int  q=Integer.MIN_VALUE;  // q無窮小
+			for(int i=1;i<=n;i++)
+			{
+				// 取q以及已分割求得的價值中取最大值
+				q=Math.max(q, price[i-1] + BruteForceRodcutting(price, n - i));
+			}
+			return q;
+		}
+	}
+   #### 以上為主要程式內容
 
-count = 0
-
-  - count用於統計字符串裡某個字符出現的次數。 可選參數為在字符串搜索的開始與結束位置
-
-for i in range(0,len(a)):
-
-  - len為返回列表元素個數
+  - BD法
 
     for j in range(i+1,len(a)):
     
