@@ -5,7 +5,7 @@
 
 ## 開發軟體環境
 
-![image](https://jupyter.org/assets/nav_logo.svg)
+![image](https://i.imgur.com/5MPeamM.png)
 
   Jupyter Notebook 是一個建構於網頁應用程式的開源整合開發環境，允許資料科學團隊像是在筆記本計算一般地撰寫程式、顯示程式和視覺化輸出、支援 Markdown 標記語言與 LaTex 數學方程式的文字段落。
   
@@ -21,7 +21,7 @@ Anaconda 提供完整解決方案，是資料科學團隊的首選推薦，除�
   
 #### 如欲安裝，可前往 Anaconda 下載頁面，依照不同作業系統點選對應的 Python 3 安裝檔。
 
-![image](https://miro.medium.com/max/3590/1*LVQLaIqcWFcBopPk5LQ_Bg.png)
+![image](https://i.imgur.com/FwQDKpO.jpg)
   
 ## 主程式位置
 
