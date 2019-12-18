@@ -16,10 +16,10 @@
   - 可以 Goolge 搜尋 「Java SE Development Kit 8」，即可以找到目前官方最新版本。
   - 官方連結：https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-安裝 Eclipse IDE
+#### 安裝 Eclipse IDE
   - 連結：https://www.eclipse.org/
   
-#### 主程式位置
+### 主程式位置
 
 前面將數據都處理好之後
 
