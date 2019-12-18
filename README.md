@@ -113,12 +113,11 @@
 - 【從零開始學 Java 程式設計】安裝 JAVA 開發軟體
   - http://tw-hkt.blogspot.com/2019/03/java.html
   
-- 給自學者的Python教學(7)：字串(String)
-  - https://medium.com/@ChunYeung/%E7%B5%A6%E8%87%AA%E5%AD%B8%E8%80%85%E7%9A%84python%E6%95%99%E5%AD%B8-7-%E5%AD%97%E4%B8%B2-string-1fa93a9aa471
+- dp入門——由分桿問題認識動態規劃
+  - https://www.cnblogs.com/mozi-song/p/9615167.html
 
-- Python strip()方法
-  - https://www.runoob.com/python/att-string-strip.html
+- Dynamic Programming
+  - https://jerrywang304.github.io/2017/09/18/Dynamic-Programming/
   
-- Bubble Sort & Merge Sort
-  - https://www.runoob.com/python3/python-bubble-sort.html
-  - https://www.runoob.com/python3/python-merge-sort.html
+- Dynamic Programming - Rod Cutting
+  - https://www.radford.edu/~nokie/classes/360/dp-rod-cutting.html
