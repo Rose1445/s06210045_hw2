@@ -10,15 +10,16 @@
   要先在電腦上安裝 Java SDK 和 Eclipse IDE 兩套軟體。之後使用 Eclipse IDE 整合開發環境在上面建立 Java 專案，撰寫 Java 程式碼，將 Java 檔編譯成 class 檔，後直接將運行過程和結果輸出在資訊視窗中。
 
 ### 下載與安裝
-安裝 Java SDK
+#### 安裝 Java SDK
 
 ![image](https://i.imgur.com/FwQDKpO.jpg)
   - 可以 Goolge 搜尋 「Java SE Development Kit 8」，即可以找到目前官方最新版本。
   - 官方連結：https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
 安裝 Eclipse IDE
   - 連結：https://www.eclipse.org/
   
-## 主程式位置
+#### 主程式位置
 
 前面將數據都處理好之後
 
