@@ -26,74 +26,85 @@
   // 取得使用者輸入的整數
   
 		 		Scanner scanner=new Scanner(System.in);
-				
-		 		// 輸入此次作業指定Rod Length值
-				
-		 		System.out.print("Rod length: ");
-				
-		 		int n=scanner.nextInt();
-				
-		 		// 輸出Maximum revenue
-				
+		 		// 輸入此次作業指定Rod Length值				
+		 		System.out.print("Rod length: ");				
+		 		int n=scanner.nextInt();				
+		 		// 輸出Maximum revenue				
 		 		System.out.println("Maximum revenue: "+BruteForceRodcutting(Price,n));
 				
   // 雙層循環建立r和s存入切割數點，以及Maximum revenue
   
-	static int[] s=new int[100];
-	
-	static int BruteForceRodcutting(int price[],int n)
-	
-	// Bruteforce 暴力法: 列出每種切割方案，比較出Maximum revenue
-	
-	// 所需時間T=O(2^n)
-	
-	{
-	
-		if(n==0)
-		
+	static int[] s=new int[100];	
+	static int BruteForceRodcutting(int price[],int n)	
+	// Bruteforce 暴力法: 列出每種切割方案，比較出Maximum revenue	
+	// 所需時間T=O(2^n)	
+	{	
+		if(n==0)		
 			{
-			
-				// 無法切割: return 0
-				
-				return 0;
-				
-			} 
-			
-		else
-		
-		{
-		
+				// 無法切割: return 0				
+				return 0;			
+			} 			
+		else		
+		{		
 			int  q=Integer.MIN_VALUE;  // q無窮小
-			
-			for(int i=1;i<=n;i++)
-			
-			{
-			
-				// 取q以及已分割求得的價值中取最大值
-				
-				q=Math.max(q, price[i-1] + BruteForceRodcutting(price, n - i));
-				
-			}
-			
-			return q;
-			
+			for(int i=1;i<=n;i++)			
+			{		
+				// 取q以及已分割求得的價值中取最大值				
+				q=Math.max(q, price[i-1] + BruteForceRodcutting(price, n - i));				
+			}			
+			return q;			
 		}
 		
 	}
 	
-   #### 以上為主要程式內容
+   ##### 以上為主要程式內容
 
   - BD法
 
-    for j in range(i+1,len(a)):
+  // 取得使用者輸入的整數
     
-        print(i,j)
-        
-        if(a[i]>a[j]):
-        
-            count +=1
-            
-  - 此迴圈讓前一個數一一跟後面的數去做比較
+		 		Scanner scanner=new Scanner(System.in);
+		 		// 輸入此次作業指定Rod Length值
+		 		System.out.print("Rod length: ");
+		 		int n=scanner.nextInt();
+		 		// 輸出Maximum revenue
+		 		System.out.println("Maximum revenue: "+BottomUpRodcutting(Price,n));
+		 		printCuts(Price,n);
+    
+  // 雙層循環建立r和s存入切割數點，以及Maximum revenue
+  
+	static int[] s=new int[100];
+	static int BottomUpRodcutting(int p[] ,int n) {
+	// Bottom-up BD法: 從小排到大來解
+	// 所需時間T=O(n^2)
+		 int[] r=new int[n+1];
+		 r[0]=0;
+		 s[0]=0;
+		 
+	    for(int i = 1; i <= n; i++) {
+	        int q =Integer.MIN_VALUE;
+	        for(int j = 1; j <= i; j++) {
+		        	if(q<p[j] + r[i - j])  // q為Rod Length的最大值
+		        	{
+		        		q=p[j] + r[i - j];
+		        		s[i] = j;  // s記錄取得最大Rod Price的切割點
+		        	}
+	            }
+	        r[i] = q;  // 將最大值存入r[i]中
+	        }
+	    return r[n];
+	}
+	 
+	static void printCuts(int p[],int n) {
+		// 輸出Cuts
+		System.out.print("Cuts:");
+		while(n > 0) {
+			System.out.print(s[n]+" ");
+			// 找出對應n的切割點
+			n=n-s[n];
+		}
+		System.out.println();
+	}
 
 ## 參考資料
 
