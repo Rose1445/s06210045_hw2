@@ -24,34 +24,63 @@
   - BF法
 
   // 取得使用者輸入的整數
+  
 		 		Scanner scanner=new Scanner(System.in);
+				
 		 		// 輸入此次作業指定Rod Length值
+				
 		 		System.out.print("Rod length: ");
+				
 		 		int n=scanner.nextInt();
+				
 		 		// 輸出Maximum revenue
+				
 		 		System.out.println("Maximum revenue: "+BruteForceRodcutting(Price,n));
+				
   // 雙層循環建立r和s存入切割數點，以及Maximum revenue
+  
 	static int[] s=new int[100];
+	
 	static int BruteForceRodcutting(int price[],int n)
+	
 	// Bruteforce 暴力法: 列出每種切割方案，比較出Maximum revenue
+	
 	// 所需時間T=O(2^n)
+	
 	{
+	
 		if(n==0)
+		
 			{
+			
 				// 無法切割: return 0
+				
 				return 0;
+				
 			} 
+			
 		else
+		
 		{
+		
 			int  q=Integer.MIN_VALUE;  // q無窮小
+			
 			for(int i=1;i<=n;i++)
+			
 			{
+			
 				// 取q以及已分割求得的價值中取最大值
+				
 				q=Math.max(q, price[i-1] + BruteForceRodcutting(price, n - i));
+				
 			}
+			
 			return q;
+			
 		}
+		
 	}
+	
    #### 以上為主要程式內容
 
   - BD法
